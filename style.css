@@ -4,7 +4,6 @@ body{
     background-repeat: no-repeat;
     background-size: 100% auto;
     margin-right: 40%;
-    height:1125px;
 }
 img {
     display: block;
@@ -35,26 +34,37 @@ button:hover{
   background-color: #7e7206;
 } 
   /* Style page content */
-.home {    
-    width: auto;     
-    display:block;     
+.main {    
+    width: auto;  
+    position: relative;    
     margin-left:2%;   
     justify-content: center;
 }
-.home p{   
+#home {    
+    width: auto;  
+    position: absolute;       
+    margin-left:2%;   
+    justify-content: center;
+}
+#home p{   
     font-size: 20px; 
     color: #ecebe1;
     background-color: rgba(128, 128, 128, 0.5);
 }
-.home h2{
+#home h2{
     font-size: 30px;
     color: #ffffff;
     background-color: rgba(128, 128, 128, 0.5);
 } 
 .order{
     opacity: .7;    
-    display: flex;     
-    padding-top: 20px; 
-    margin-bottom: 10%;
+    position: fixed;
+    background-color: #333;
+    overflow: hidden;
+    bottom:0;
+    width: 100%;     
     justify-content: center; 
+}
+.hide {
+    visibility: hidden;
 }
