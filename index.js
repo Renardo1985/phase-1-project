@@ -49,11 +49,14 @@ function generateItem(data)
     let p1 = document.createElement("p");
     let p2 = document.createElement("p");
     let p3 = document.createElement("p");
+    let img = document.createElement("img");
+
     p0.textContent = data.name;
     p1.textContent = `About: ${data.about}`;
     p2.textContent = `Price: $${data.price}`;
     p3.textContent = `Rating: ${rating[data.rating]}`;
-    load.append(p0, p1, p2, p3)
+    img.src = data.image;
+    load.append(p0, img, p1, p2, p3)
 }
 
 function populateForm(data){    
