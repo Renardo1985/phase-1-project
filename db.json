@@ -30,21 +30,21 @@
         {
             "id": 1,
             "name": "Elegant",
-            "about":"1-2 colors of  your choice with decorative items (such as sprinkles, 4 marshmallow fondant toppers and edible luster dust)",
+            "about":"1-2 colors of  your choice with decorative items (such as sprinkles, 4 marshmallow fondant toppers and edible luster dust.",
             "price":60,
             "rating": 0
         },
         {
             "id": 2,
             "name": "Luxury",
-            "about":"1-4 colors of your choice with decorative items (such as fresh edible flowers, 4 acrylic toppers, edible gold leaf, luxury sprinkle blend and edible luster dust) ",
+            "about":"1-4 colors of your choice with decorative items (such as fresh edible flowers, 4 acrylic toppers, edible gold leaf, luxury sprinkle blend and edible luster dust.",
             "price":74,
             "rating": 0
         }, 
         {
             "id": 3,
             "name": "Floral",
-            "about":"Will feature a range of flowers (3 floral designs; 2 colors",
+            "about":"Will feature a range of flowers 3 floral designs with multiple colors.",
             "price":90,
             "rating": 0
         }
@@ -56,22 +56,22 @@
         {
             "id": 1,
             "name": "Drop Cookies",
-            "about":"",
-            "price":"",
+            "about":"1-2 colors of  your choice with decorative items such as sprinkles, 4 marshmallow fondant toppers and edible luster dust.",
+            "price": 36,
             "rating": 0
         },
         {
             "id": 2,
             "name": "Sugar Cookies",
-            "about":"",
-            "price":"",
+            "about":"A dozen sugar cookies covered with homemade marshmallow fondant. They make a beautiful personalized edible gift or sweet treat at any party or to enjoy with a cup of tea. No detail goes unnoticed with your bespoke set of sugar cookies.",
+            "price": 96,
             "rating": 0
         }, 
         {
             "id": 3,
             "name": "New York-Style Cookies",
-            "about":"",
-            "price":"",
+            "about":"A dozen 4 ounce cookies of heavenly goodness; crispy on the outside, soft and chewy on the inside.",
+            "price": 72,
             "rating": 0
         }
 
@@ -82,15 +82,15 @@
         {
             "id": 1,
             "name": "Brownie",
-            "about":"",
-            "price":"",
+            "about":"Half dozen chocolate and cocoa powder brownies made with premium quality ingredients.",
+            "price":36,
             "rating": 0
         },
         {
             "id": 2,
             "name": "Blondies",
-            "about":"",
-            "price":"",
+            "about":"Half dozen chocolate blondies made with premium quality chocolate all-natural ingredients.",
+            "price":36,
             "rating": 0
         }
 
