@@ -1,110 +1,98 @@
-{  
-"cakes":
-    [
-        {
-            "id": 1,
-            "name": "Layer Cake",
-            "image":"src/later-cake.jpg",
-            "about":"Multiple layers of sheet cake that have been decorated with beautifully piped buttercream. They are available square or round in a range of simple and elegant styles, colours and can be customized to any theme.",
-            "price":175,
-            "rating": 0
-        },
-        {
-            "id": 2,
-            "name": "Bundt Cake",
-            "image":"src/bundt-cake.jpg",
-            "about":"Bundt cakes are prefect for any occasion; holiday gift, birthday gift, anniversary gift, celebratory gift or a just-because gift. A 10 inch cake, with numerous flavor options, that can be topped with sugar glaze, dusted with powdered sugar, drizzled with chocolate ganache or be served plain.",
-            "price":75,
-            "rating": 0
-        }, 
-        {
-            "id": 3,
-            "name": "Number/Letter Cake",
-            "image":"src/alphabet-cake.jpeg",
-            "about":"Number/Letter cakes are the perfect way to celebrate those big milestone birthdays or to honor a big-day detail such as anniversaries or weddings. As with our round cakes, our number/letter cakes are also created with bespoke colour schemes and themes in mind, and are always personalised with a name and decorations.",
-            "price":120,
-            "rating": 0
-        }
-
-    ],
-
-"cupcakes":
-    [
-        {
-            "id": 1,
-            "name": "Elegant",
-            "image":"src/cupcakes-1.jpg",
-            "about":"1-2 colors of  your choice with decorative items (such as sprinkles, 4 marshmallow fondant toppers and edible luster dust.",
-            "price":60,
-            "rating": 0
-        },
-        {
-            "id": 2,
-            "name": "Luxury",
-            "image":"src/cupcakes-2.jpg",
-            "about":"1-4 colors of your choice with decorative items (such as fresh edible flowers, 4 acrylic toppers, edible gold leaf, luxury sprinkle blend and edible luster dust.",
-            "price":74,
-            "rating": 0
-        }, 
-        {
-            "id": 3,
-            "name": "Floral",
-            "image":"src/cupcake-3.jpg",
-            "about":"Will feature a range of flowers 3 floral designs with multiple colors.",
-            "price":90,
-            "rating": 0
-        }
-
-    ],
-
-"cookies":
-    [
-        {
-            "id": 1,
-            "name": "Drop Cookies",
-            "image":"src/drop-cookies.jpg",
-            "about":"1-2 colors of  your choice with decorative items such as sprinkles, 4 marshmallow fondant toppers and edible luster dust.",
-            "price": 36,
-            "rating": 0
-        },
-        {
-            "id": 2,
-            "name": "Sugar Cookies",
-            "image":"src/sugar-cookies.jpg",
-            "about":"A dozen sugar cookies covered with homemade marshmallow fondant. They make a beautiful personalized edible gift or sweet treat at any party or to enjoy with a cup of tea. No detail goes unnoticed with your bespoke set of sugar cookies.",
-            "price": 96,
-            "rating": 0
-        }, 
-        {
-            "id": 3,
-            "name": "New York-Style Cookies",
-            "image":"src/new-york.jpg",
-            "about":"A dozen 4 ounce cookies of heavenly goodness; crispy on the outside, soft and chewy on the inside.",
-            "price": 72,
-            "rating": 0
-        }
-
-    ],
-
-"brownies":
-    [
-        {
-            "id": 1,
-            "name": "Brownie",
-            "image":"src/Brownies-.jpg",
-            "about":"Half dozen chocolate and cocoa powder brownies made with premium quality ingredients.",
-            "price":36,
-            "rating": 0
-        },
-        {
-            "id": 2,
-            "name": "Blondies",
-            "image":"src/blonde-brownies.jpg",
-            "about":"Half dozen chocolate blondies made with premium quality chocolate all-natural ingredients.",
-            "price":36,
-            "rating": 0
-        }
-
-    ]
-
+{
+  "cakes": [
+    {
+      "id": 1,
+      "name": "Layer Cake",
+      "image": "src/later-cake.jpg",
+      "about": "Multiple layers of sheet cake that have been decorated with beautifully piped buttercream. They are available square or round in a range of simple and elegant styles, colours and can be customized to any theme.",
+      "price": 175,
+      "rating": 0
+    },
+    {
+      "id": 2,
+      "name": "Bundt Cake",
+      "image": "src/bundt-cake.jpg",
+      "about": "Bundt cakes are prefect for any occasion; holiday gift, birthday gift, anniversary gift, celebratory gift or a just-because gift. A 10 inch cake, with numerous flavor options, that can be topped with sugar glaze, dusted with powdered sugar, drizzled with chocolate ganache or be served plain.",
+      "price": 75,
+      "rating": 0
+    },
+    {
+      "id": 3,
+      "name": "Number/Letter Cake",
+      "image": "src/alphabet-cake.jpeg",
+      "about": "Number/Letter cakes are the perfect way to celebrate those big milestone birthdays or to honor a big-day detail such as anniversaries or weddings. As with our round cakes, our number/letter cakes are also created with bespoke colour schemes and themes in mind, and are always personalised with a name and decorations.",
+      "price": 120,
+      "rating": 0
+    }
+  ],
+  "cupcakes": [
+    {
+      "id": 1,
+      "name": "Elegant",
+      "image": "src/cupcakes-1.jpg",
+      "about": "1-2 colors of  your choice with decorative items (such as sprinkles, 4 marshmallow fondant toppers and edible luster dust.",
+      "price": 60,
+      "rating": 1
+    },
+    {
+      "id": 2,
+      "name": "Luxury",
+      "image": "src/cupcakes-2.jpg",
+      "about": "1-4 colors of your choice with decorative items (such as fresh edible flowers, 4 acrylic toppers, edible gold leaf, luxury sprinkle blend and edible luster dust.",
+      "price": 74,
+      "rating": 0
+    },
+    {
+      "id": 3,
+      "name": "Floral",
+      "image": "src/cupcake-3.jpg",
+      "about": "Will feature a range of flowers 3 floral designs with multiple colors.",
+      "price": 90,
+      "rating": 0
+    }
+  ],
+  "cookies": [
+    {
+      "id": 1,
+      "name": "Drop Cookies",
+      "image": "src/drop-cookies.jpg",
+      "about": "1-2 colors of  your choice with decorative items such as sprinkles, 4 marshmallow fondant toppers and edible luster dust.",
+      "price": 36,
+      "rating": 1
+    },
+    {
+      "id": 2,
+      "name": "Sugar Cookies",
+      "image": "src/sugar-cookies.jpg",
+      "about": "A dozen sugar cookies covered with homemade marshmallow fondant. They make a beautiful personalized edible gift or sweet treat at any party or to enjoy with a cup of tea. No detail goes unnoticed with your bespoke set of sugar cookies.",
+      "price": 96,
+      "rating": 0
+    },
+    {
+      "id": 3,
+      "name": "New York-Style Cookies",
+      "image": "src/new-york.jpg",
+      "about": "A dozen 4 ounce cookies of heavenly goodness; crispy on the outside, soft and chewy on the inside.",
+      "price": 72,
+      "rating": 0
+    }
+  ],
+  "brownies": [
+    {
+      "id": 1,
+      "name": "Brownie",
+      "image": "src/Brownies-.jpg",
+      "about": "Half dozen chocolate and cocoa powder brownies made with premium quality ingredients.",
+      "price": 36,
+      "rating": 0
+    },
+    {
+      "id": 2,
+      "name": "Blondies",
+      "image": "src/blonde-brownies.jpg",
+      "about": "Half dozen chocolate blondies made with premium quality chocolate all-natural ingredients.",
+      "price": 36,
+      "rating": 0
+    }
+  ]
 }
