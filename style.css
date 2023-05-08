@@ -73,7 +73,7 @@ button:hover{
 }
 .item-image {
     justify-self: center;
-    height: 22rem;
+    height: 16rem;
     width: 25rem;
     object-fit: fill;
     border: grey solid 2px;    
