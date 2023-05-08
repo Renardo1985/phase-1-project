@@ -12,18 +12,23 @@ const rating = ["✯","✯✯","✯✯✯","✯✯✯✯","✯✯✯✯✯"]
 // gets all buttons from nav bar in DOM
 const buttons = document.querySelectorAll("#btn");
 // global attribute for main page area
-const main = document.querySelector(".main");
 const home = document.querySelector("#home");
 const load = document.querySelector("#load");
+const form = document.querySelector("#checkout-form")
+
+//Hides check-out form by default
+form.style.display = "none"
 
 //event listener on all side nav buttons using forEach with call back
 buttons.forEach(element => {element.addEventListener("click", buttonCall)});
-document.querySelector("#logo").addEventListener("click",loadHome)
+document.querySelector("#logo").addEventListener("click",()=>{clearNode(load); home.style.display = "block"})
 
 //call back function for clicks on Navigation bar
 function buttonCall()
 {    
-    clearNode(load) 
+    clearNode(load)
+    home.style.display = "none" 
+    form.style.display = "none"
     let h2 = document.createElement("h2");
     let p = document.createElement("p")
     h2.textContent = this.textContent;   
@@ -45,10 +50,7 @@ function requestData(key)
     
     fetch(`http://localhost:3000/${key}`)
     .then(data => data.json())
-    .then((item) => {
-                        item.forEach(item =>generateItem(item,key));
-                        //populateForm(item);
-                    })
+    .then((item) => {item.forEach(item =>generateItem(item,key));})
     .catch(function(error){alert(`${error.message} from http://localhost:3000/${key}`)});
 }
 //Patch to update rating.
@@ -59,6 +61,8 @@ function updateRating(item,key){
 
 function generateItem(data,key)
 {          
+    
+    let container = document.createElement("div")
     let p0 = document.createElement("p");
     let p1 = document.createElement("p");
     let p2 = document.createElement("p");
@@ -87,19 +91,9 @@ function generateItem(data,key)
     add.textContent = "Add to Cart"
     //when add to cart is clicked adds item to array cart
     add.addEventListener("click",() => {cart.push(data); console.log(cart)})
-    load.append(p0, img,p1,rate, p2,add)
-}
-
-function populateForm(data){    
-    const select = document.getElementById("item-name");
-    clearNode(select)
+    container.append(p0, img,p1,rate, p2,add)
+    load.append(container)
     
-    data.forEach( data => {
-        let option = document.createElement("option");
-        option.value = data.name;
-        option.textContent = data.name;
-        select.appendChild(option);
-    });
 }
 
 function loadCart()
@@ -118,6 +112,7 @@ function loadCart()
     let img = document.createElement("img");
     let remove = document.createElement("button")   
     img.src = element.image;
+    img.style.height = "12rem"
     p1.textContent = `About: ${element.name}`;
     remove.textContent = "Remove"
     remove.addEventListener("click",() =>{cart.splice(index,1);loadCart();});
@@ -130,7 +125,7 @@ function loadCart()
     let total = document.createElement("p")
     total.textContent = `Total Price $${reduceCart()}`
     let checkOut = document.createElement("button")
-    checkOut.textContent = "Check Out"
+    checkOut.textContent = "Continue to Check Out"
     checkOut.addEventListener("click",()=>{checkOutForm()})
 
     load.append(total,checkOut)
@@ -138,30 +133,27 @@ function loadCart()
 }
 function checkOutForm()
 {
-
-const form = document.createElement("form");
-const name = document.createElement("input");
-const email = document.createElement("input")
-const button = document.createElement("button");
-
-name.type = "text";
-name.placeholder = "Enter your name";
-email.type = "email"
-email.placeholder = "Enter your email"
-button.type= "submit"
-button.textContent = "Submit";
-
-form.appendChild(name);
-form.appendChild(email)
-form.appendChild(button);
-
-form.addEventListener("submit", (event) =>{
-  event.preventDefault(); // prevent the default form submission
-  alert(`Hi, ${name.value}!, Your order has being processed`); // log a greeting message to the console
-});
-load.append(form)
+    clearNode(load)
+    let h2 = document.createElement("h2");
+    h2.textContent = "Cart"
+    let p = document.createElement("p")
+    p.textContent = `You have ${cart.length} item(s) in your cart.`
+    let total = document.createElement("p")
+    total.textContent = `Total Price $${reduceCart()}`
+    load.append(h2,p,total)
+    form.style.display = "block";
+    form.addEventListener("submit", (event) =>{
+    event.preventDefault(); // prevent the default form submission  
+    alert(`Thank you for your purchase ${form.name.value}!, Your order has being processed`); // log a greeting message to the console
+    form.reset();    
+    home.style.display = "block"
+    form.style.display = "none"
+    cart.splice(0,cart.length); //empty the elements from cart 
+    clearNode(load) 
+    });
 }
 
+//Function to calculate Total price for all items in cart
 function reduceCart()
 {
     const sumOfPrices = cart.reduce((accumulator, currentValue) => {
@@ -170,8 +162,6 @@ function reduceCart()
     return sumOfPrices;
 
 }
-function loadHome(){ clearMain(load); home.className = ""}
-
 //function used to clear nodes in DOM
 function clearNode(node) {
     while (node.firstChild) {
