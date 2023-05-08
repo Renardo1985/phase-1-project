@@ -11,10 +11,14 @@ const rating = ["✯","✯✯","✯✯✯","✯✯✯✯","✯✯✯✯✯"]
 
 // gets all buttons from nav bar in DOM
 const buttons = document.querySelectorAll("#btn");
-// global attribute for main page area
+// global attribute 
 const home = document.querySelector("#home");
 const load = document.querySelector("#load");
 const form = document.querySelector("#checkout-form")
+let h2 = document.createElement("h2");
+h2.classList="h2Class"
+let p = document.createElement("p")
+p.classList="pClass"
 
 //Hides check-out form by default
 form.style.display = "none"
@@ -28,9 +32,7 @@ function buttonCall()
 {    
     clearNode(load)
     home.style.display = "none" 
-    form.style.display = "none"
-    let h2 = document.createElement("h2");
-    let p = document.createElement("p")
+    form.style.display = "none" 
     h2.textContent = this.textContent;   
     if (this.textContent === "Cart")
     {        
@@ -60,26 +62,25 @@ function updateRating(item,key){
   }
 
 function generateItem(data,key)
-{          
-    
+{     
     let container = document.createElement("div")
-    let p0 = document.createElement("p");
+    container.classList = "pastry-item"
+    let h = document.createElement("h2");
     let p1 = document.createElement("p");
     let p2 = document.createElement("p");
     let rate = document.createElement("button");
     let img = document.createElement("img");
     let add = document.createElement("button")   
 
-    p0.textContent = data.name;
+    h.textContent = data.name;
     p1.textContent = `About: ${data.about}`;
-    p1.style.visibility = "hidden";
     p2.textContent = `Price: $${data.price}`;
-    rate.textContent = `Rating:${rating[data.rating]}`;    
+    rate.textContent = `Rating:${rating[data.rating]}`; 
+    img.classList = "item-image"   
     img.src = data.image;
     //on mouseover show item description
-    img.addEventListener("mouseover",()=>{p1.style.visibility ="";})
-    img.style.height = "12rem"
-    img.addEventListener("mouseleave",()=>{p1.style.visibility ="hidden";})
+    img.addEventListener("mouseover",()=>{p1.style.color ="#d4af37";})
+    img.addEventListener("mouseleave",()=>{p1.style.color ="white";})
     rate.addEventListener("click",() => 
     {
         if (data.rating < 4){data.rating += 1}
@@ -91,7 +92,7 @@ function generateItem(data,key)
     add.textContent = "Add to Cart"
     //when add to cart is clicked adds item to array cart
     add.addEventListener("click",() => {cart.push(data); console.log(cart)})
-    container.append(p0, img,p1,rate, p2,add)
+    container.append(h, img,p1,rate, p2,add)
     load.append(container)
     
 }
@@ -99,17 +100,16 @@ function generateItem(data,key)
 function loadCart()
 {
     clearNode(load)
-    let h2 = document.createElement("h2");
     h2.textContent = "Cart"
-    let p = document.createElement("p")
     p.textContent = `You have ${cart.length} item(s) in your cart.`
     load.append(h2,p)
-
     cart.forEach((element, index )=> { 
     let item = document.createElement("div");
+    item.classList="cart-item"
     let p1 = document.createElement("p");
     let p2 = document.createElement("p");
     let img = document.createElement("img");
+    img.classList = "cart-img"
     let remove = document.createElement("button")   
     img.src = element.image;
     img.style.height = "12rem"
@@ -127,7 +127,6 @@ function loadCart()
     let checkOut = document.createElement("button")
     checkOut.textContent = "Continue to Check Out"
     checkOut.addEventListener("click",()=>{checkOutForm()})
-
     load.append(total,checkOut)
     }
 }
@@ -141,7 +140,7 @@ function checkOutForm()
     let total = document.createElement("p")
     total.textContent = `Total Price $${reduceCart()}`
     load.append(h2,p,total)
-    form.style.display = "block";
+    form.style.display = "Inline-grid";
     form.addEventListener("submit", (event) =>{
     event.preventDefault(); // prevent the default form submission  
     alert(`Thank you for your purchase ${form.name.value}!, Your order has being processed`); // log a greeting message to the console

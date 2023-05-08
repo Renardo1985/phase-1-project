@@ -1,70 +1,103 @@
-body{
-    background-image: url("src/back.png");
-    background-color: #000000;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    margin-right: 40%;
+@font-face {
+  font-family: XiaoWei;
+  src: url("src/ZCOOLXiaoWei-Regular.ttf");
 }
-img {
+body{
+    background-color: black;
+    background-repeat: no-repeat;
+    font-family: XiaoWei; 
+    color: #ffffff; 
+} 
+#logo {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    height: 110px;
-    width: 600px;
-    object-fit: none;
-  }
+    height: 7rem;
+    width: 35.5rem;
+    object-fit: cover;
+}
 /* The navigation menu div*/
-.nav {    
-    opacity: .7;    
-    display: flex;     
-    /* margin-left:auto; */
-    padding-top: 20px; 
-    justify-content: center; 
+.nav {        
+    display: flex;      
+    margin-top: 1rem; 
 }
   /* The navigation menu links */
- button {        
-    background-color: gray;
-    color: white;  
+#btn{
     padding: 6px 6px;
-    font-size: 20px; 
-    font-family:'ZCOOL XiaoWei',monospace;
+    font-size: 30px; 
+} 
+button {        
+    background-color: black;
+    color: white;  
+    font-family: XiaoWei;
     border: none;
+    position: relative;
+    border: none;
+    height: 2.5rem;
+    width: max-content;
+    font-size: 18px;
+    justify-self: center;
 } 
 button:hover{
-  background-color: #7e7206;
-} 
-  /* Style page content */
-.main {    
-    width: auto;  
-    position: relative;    
-    margin-left:2%;   
-    justify-content: center;
+  background-color: #d4af37;
 }
-#home {    
-    width: auto;  
-    position: absolute;       
-    margin-left:2%;   
-    justify-content: center;
-}
-#home p{   
-    font-size: 20px; 
-    color: #ecebe1;
-    background-color: rgba(128, 128, 128, 0.5);
-}
-#home h2{
-    font-size: 30px;
+#home{
+    display: inline-block;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
     color: #ffffff;
-    background-color: rgba(128, 128, 128, 0.5);
-} 
-.order{
-    opacity: .7;    
-    position: fixed;
-    background-color: #333;
-    overflow: hidden;
-    bottom:0;
-    width: 100%;     
-    justify-content: center; 
 }
-.hide {
-    visibility: hidden;
+#home p{
+    text-align: justify;
+}
+#load{
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+}
+#load p{
+    text-align: justify;
+    word-spacing:-2px;
+    justify-self: center;
+}
+
+.pastry-item{
+    text-align: center;
+    padding: .5rem;
+    width: 30rem;
+    height: 30rem;
+    display: inline-grid;
+    margin: 1rem 2rem;
+    color: #ffffff;
+}
+.item-image {
+    justify-self: center;
+    height: 22rem;
+    width: 25rem;
+    object-fit: fill;
+    border: grey solid 2px;    
+}
+.cart-item{  
+    text-align: center;
+    border: grey solid 1px;  
+    padding: .5rem;
+    width: 14rem;
+    height: 20rem;
+    display: inline-grid;
+    margin: 1rem 1rem;
+    color: #ffffff;
+}
+.cart-img{
+    justify-self: center; 
+    width: 14rem;
+}
+#form-container{
+    display: block;
+    text-align: center;
+}
+#checkout-form{
+    text-align: center;
+    justify-self: center;
+
 }
