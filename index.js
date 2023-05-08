@@ -9,8 +9,6 @@ const about = {
 //ratings array
 const rating = ["✯","✯✯","✯✯✯","✯✯✯✯","✯✯✯✯✯"]
 
-
-
 // gets all buttons from nav bar in DOM
 const buttons = document.querySelectorAll("#btn");
 // global attribute for main page area
@@ -28,15 +26,13 @@ function buttonCall()
     clearNode(load) 
     let h2 = document.createElement("h2");
     let p = document.createElement("p")
-    h2.textContent = this.textContent;
-   
+    h2.textContent = this.textContent;   
     if (this.textContent === "Cart")
     {        
-        p.textContent = `You have ${cart.length} item(s) in your cart`
-        load.append(h2,p)
+        loadCart();
     }
-    else{
-        
+    else
+    {
         p.textContent = about[this.textContent.toLowerCase()];
         load.append(h2,p)
         requestData(this.textContent.toLowerCase());
@@ -53,16 +49,16 @@ function requestData(key)
                         item.forEach(item =>generateItem(item,key));
                         //populateForm(item);
                     })
-    .catch(function(error){alert(error)});
+    .catch(function(error){alert(`${error.message} from http://localhost:3000/${key}`)});
 }
+//Patch to update rating.
 function updateRating(item,key){
     fetch(`http://localhost:3000/${key}/${item.id}`, {method: "PATCH",headers:{"Content-Type": "application/json",Accept: "application/json"},body: JSON.stringify({"rating":item.rating})})
-  
+    .catch(function(error){alert(`${error.message} from http://localhost:3000/${key}/${item.id}`)});
   }
 
 function generateItem(data,key)
-{    
-        
+{          
     let p0 = document.createElement("p");
     let p1 = document.createElement("p");
     let p2 = document.createElement("p");
@@ -106,6 +102,74 @@ function populateForm(data){
     });
 }
 
+function loadCart()
+{
+    clearNode(load)
+    let h2 = document.createElement("h2");
+    h2.textContent = "Cart"
+    let p = document.createElement("p")
+    p.textContent = `You have ${cart.length} item(s) in your cart.`
+    load.append(h2,p)
+
+    cart.forEach((element, index )=> { 
+    let item = document.createElement("div");
+    let p1 = document.createElement("p");
+    let p2 = document.createElement("p");
+    let img = document.createElement("img");
+    let remove = document.createElement("button")   
+    img.src = element.image;
+    p1.textContent = `About: ${element.name}`;
+    remove.textContent = "Remove"
+    remove.addEventListener("click",() =>{cart.splice(index,1);loadCart();});
+    p2.textContent = `Price: $${element.price}`; 
+    item.append(img,p1,remove,p2)
+    load.append(item)
+    })
+
+    if (cart.length>0){
+    let total = document.createElement("p")
+    total.textContent = `Total Price $${reduceCart()}`
+    let checkOut = document.createElement("button")
+    checkOut.textContent = "Check Out"
+    checkOut.addEventListener("click",()=>{checkOutForm()})
+
+    load.append(total,checkOut)
+    }
+}
+function checkOutForm()
+{
+
+const form = document.createElement("form");
+const name = document.createElement("input");
+const email = document.createElement("input")
+const button = document.createElement("button");
+
+name.type = "text";
+name.placeholder = "Enter your name";
+email.type = "email"
+email.placeholder = "Enter your email"
+button.type= "submit"
+button.textContent = "Submit";
+
+form.appendChild(name);
+form.appendChild(email)
+form.appendChild(button);
+
+form.addEventListener("submit", (event) =>{
+  event.preventDefault(); // prevent the default form submission
+  alert(`Hi, ${name.value}!, Your order has being processed`); // log a greeting message to the console
+});
+load.append(form)
+}
+
+function reduceCart()
+{
+    const sumOfPrices = cart.reduce((accumulator, currentValue) => {
+        return accumulator + currentValue.price;
+      }, 0);
+    return sumOfPrices;
+
+}
 function loadHome(){ clearMain(load); home.className = ""}
 
 //function used to clear nodes in DOM
