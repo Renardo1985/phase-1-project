@@ -6,6 +6,12 @@ const about = {
     cookies: "We offer three style of cookies, drop cookies, NY style cookies and Fondant covered sugar cookies. We make each cookie by hand for every order, with premium quality ingredient, attention to detail and a lot of love.",
     brownies: "Our fudge brownies and blondies are made with premium quality, all-natural ingredients; no preservatives or stabilizers and nothing artificial. Every brownie and blondies is handcrafted with precision and love. We never want to sacrifice quality and promise to make the most irresistible and best brownies possible."
 }
+
+let h2 = document.createElement("h2");
+h2.classList = "h2Class"
+let p = document.createElement("p")
+p.classList = "pClass"
+
 //ratings array
 const rating = ["✯", "✯✯", "✯✯✯", "✯✯✯✯", "✯✯✯✯✯"]
 
@@ -15,17 +21,18 @@ const buttons = document.querySelectorAll(".btn");
 const home = document.querySelector("#home");
 const load = document.querySelector("#load");
 const form = document.querySelector("#checkout-form")
-let h2 = document.createElement("h2");
-h2.classList = "h2Class"
-let p = document.createElement("p")
-p.classList = "pClass"
+const contact = document.querySelector("#contact")
+const link = document.querySelector("#link")
 
-//Hides check-out form by default
+//Hides check-out and contact form by default
 form.style.display = "none"
+contact.style.display = "none"
 
 //event listener on all side nav buttons using forEach with call back
 buttons.forEach(element => { element.addEventListener("click", buttonCall) });
 document.querySelector("#logo").addEventListener("click", () => { clearNode(load); home.style.display = "block" })
+
+
 
 //call back function for clicks on Navigation bar
 function buttonCall() {

@@ -12,11 +12,16 @@
     <img id="logo" src="src/Tlogo.png" alt="header">
   </div>
   <div class="nav">
-    <button class="btn">Cakes</button>
-    <button class="btn">Cupcakes</button>
-    <button class="btn">Cookies</button>
-    <button class="btn">Brownies</button>
+    <button id ="left" class="home">Home</button>
+    <div class = "center">
+      <button id ="c" class="btn">Cakes</button>
+      <button id ="c" class="btn">Cupcakes</button>
+      <button id ="c" class="btn">Cookies</button>
+      <button id ="c" class="btn">Brownies</button>   
+    </div>
+    <div class ="right">
     <button class="btn">Cart</button>
+    </div>
   </div>
   <section class="main">
     <div id="home">
@@ -31,16 +36,17 @@
         all this worthwhile.</p>
       <p>As a small business, I am extremely grateful to all of my customers and love building relationships to help me
         get to know you better and design the perfect dessert for you, your family and friends.</p>
+      <a id ="link">Contact</a>
     </div>
     <div id = "contact-container">
     <form id="contact">
-      <label for="Name" class="fcf-label">Your name</label>
-      <input type="text" id="Name" name="Name" class="fcf-form-control" required>
-      <label for="Email" class="fcf-label">Your email address</label>
-      <input type="email" id="Email" name="Email" class="fcf-form-control" required>
-      <label for="Message" class="fcf-label">Your message</label>
-      <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
-      <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
+      <label for="Name">Your name</label>
+      <input type="text" id="Name" name="Name"  required>
+      <label for="Email" >Your email address</label>
+      <input type="email" id="Email" name="Email"  required>
+      <label for="Message" >Your message</label>
+      <textarea id="Message" name="Message"  rows="6" maxlength="3000" required></textarea>
+      <button type="submit" >Send Message</button>
     </form>
     </div>
     <div id="load"></div>
