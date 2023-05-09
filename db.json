@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Layer Cake",
-      "image": "src/later-cake.jpg",
+      "image": "src/layer-cake.jpg",
       "about": "Multiple layers of sheet cake that have been decorated with beautifully piped buttercream. They are available square or round in a range of simple and elegant styles, colours and can be customized to any theme.",
       "price": 175,
       "rating": 2
@@ -19,7 +19,7 @@
     {
       "id": 3,
       "name": "Number/Letter Cake",
-      "image": "src/alphabet-cake.jpeg",
+      "image": "src/letter cake.png",
       "about": "Number/Letter cakes are the perfect way to celebrate those big milestone birthdays or to honor a big-day detail such as anniversaries or weddings. As with our round cakes, our number/letter cakes are also created with bespoke colour schemes and themes in mind, and are always personalised with a name and decorations.",
       "price": 120,
       "rating": 3
@@ -37,7 +37,7 @@
     {
       "id": 2,
       "name": "Luxury",
-      "image": "src/cupcakes-2.jpg",
+      "image": "src/cupcake-lux.jpg",
       "about": "1-4 colors of your choice with decorative items (such as fresh edible flowers, 4 acrylic toppers, edible gold leaf, luxury sprinkle blend and edible luster dust.",
       "price": 74,
       "rating": 2
@@ -45,7 +45,7 @@
     {
       "id": 3,
       "name": "Floral",
-      "image": "src/cupcake-3.jpg",
+      "image": "src/cupcakes-flower.png",
       "about": "Will feature a range of flowers 3 floral designs with multiple colors.",
       "price": 90,
       "rating": 4
@@ -63,7 +63,7 @@
     {
       "id": 2,
       "name": "Sugar Cookies",
-      "image": "src/sugar-cookies.jpg",
+      "image": "src/sugar-cookies.png",
       "about": "A dozen sugar cookies covered with homemade marshmallow fondant. They make a beautiful personalized edible gift or sweet treat at any party or to enjoy with a cup of tea. No detail goes unnoticed with your bespoke set of sugar cookies.",
       "price": 96,
       "rating": 1
@@ -81,7 +81,7 @@
     {
       "id": 1,
       "name": "Brownie",
-      "image": "src/Brownies-.jpg",
+      "image": "src/Brownies-.png",
       "about": "Half dozen chocolate and cocoa powder brownies made with premium quality ingredients.",
       "price": 36,
       "rating": 3
