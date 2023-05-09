@@ -6,12 +6,10 @@ const about = {
     cookies: "We offer three style of cookies, drop cookies, NY style cookies and Fondant covered sugar cookies. We make each cookie by hand for every order, with premium quality ingredient, attention to detail and a lot of love.",
     brownies: "Our fudge brownies and blondies are made with premium quality, all-natural ingredients; no preservatives or stabilizers and nothing artificial. Every brownie and blondies is handcrafted with precision and love. We never want to sacrifice quality and promise to make the most irresistible and best brownies possible."
 }
-
 let h2 = document.createElement("h2");
 h2.classList = "h2Class"
 let p = document.createElement("p")
 p.classList = "pClass"
-
 //ratings array
 const rating = ["✯", "✯✯", "✯✯✯", "✯✯✯✯", "✯✯✯✯✯"]
 
@@ -39,6 +37,8 @@ document.querySelector(".contact").addEventListener("click", () => {
     if (contactForm.style.display === "none") { contactForm.style.display = "inline-grid" }
     else { contactForm.style.display = "none" }
 })
+
+//Event listener on contact form.
 contactForm.addEventListener("submit", (event) => {
     event.preventDefault(); // prevent the default form submission  
     alert(`Hi ${contactForm.name.value}!, Your message has being sent`);
@@ -47,9 +47,6 @@ contactForm.addEventListener("submit", (event) => {
     home.style.display = "block"
     contactForm.reset();
 });
-
-
-
 
 //call back function for clicks on Navigation bar
 function buttonCall() {
@@ -68,7 +65,7 @@ function buttonCall() {
     }
 
 }
-//main fetch to read from db.json
+//Access the list of pastry items from db.json
 function requestData(key) {
 
     fetch(`http://localhost:3000/${key}`)
@@ -82,6 +79,7 @@ function updateRating(item, key) {
         .catch(function (error) { alert(`${error.message} from http://localhost:3000/${key}/${item.id}`) });
 }
 
+//Function that renders each item from the db.json file to the Webpage
 function generateItem(data, key) {
     let container = document.createElement("div")
     container.classList = "pastry-item"
@@ -91,7 +89,6 @@ function generateItem(data, key) {
     let rate = document.createElement("button");
     let img = document.createElement("img");
     let add = document.createElement("button")
-
     h.textContent = data.name;
     p1.textContent = `About: ${data.about}`;
     p2.textContent = `Price: $${data.price}`;
@@ -106,21 +103,21 @@ function generateItem(data, key) {
         else { data.rating = 0 }
         rate.textContent = `Rating:${rating[data.rating]}`;
         updateRating(data, key)
-
     })
     add.textContent = "Add to Cart"
     //when add to cart is clicked adds item to array cart
     add.addEventListener("click", () => { cart.push(data); console.log(cart) })
     container.append(h, img, p1, rate, p2, add)
     load.append(container)
-
 }
 
+//Function shows all items in the cart Array
 function loadCart() {
     clearNode(load)
     h2.textContent = "Cart"
     p.textContent = `You have ${cart.length} item(s) in your cart.`
     load.append(h2, p)
+    //loops throught the cart array
     cart.forEach((element, index) => {
         let item = document.createElement("div");
         item.classList = "cart-item"
@@ -138,7 +135,7 @@ function loadCart() {
         item.append(img, p1, remove, p2)
         load.append(item)
     })
-
+    //Renders a check out button once there are items in the cart
     if (cart.length > 0) {
         let total = document.createElement("p")
         total.textContent = `Total Price $${reduceCart()}`
@@ -175,7 +172,6 @@ function reduceCart() {
         return accumulator + currentValue.price;
     }, 0);
     return sumOfPrices;
-
 }
 //function used to clear nodes in DOM
 function clearNode(node) {
