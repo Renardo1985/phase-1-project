@@ -17,20 +17,37 @@ const rating = ["✯", "✯✯", "✯✯✯", "✯✯✯✯", "✯✯✯✯✯"]
 
 // gets all buttons from nav bar in DOM
 const buttons = document.querySelectorAll(".btn");
-// global attribute 
+// global variables from elements in DOM
 const home = document.querySelector("#home");
 const load = document.querySelector("#load");
 const form = document.querySelector("#checkout-form")
-const contact = document.querySelector("#contact")
-const link = document.querySelector("#link")
+const contactForm = document.querySelector("#contact")
 
-//Hides check-out and contact form by default
+//Hides check-out and contact form by default when page loads
 form.style.display = "none"
-contact.style.display = "none"
+contactForm.style.display = "none"
 
-//event listener on all side nav buttons using forEach with call back
+//event listener on all top nav buttons using forEach with call back
 buttons.forEach(element => { element.addEventListener("click", buttonCall) });
-document.querySelector("#logo").addEventListener("click", () => { clearNode(load); home.style.display = "block" })
+
+//Event listener for Home button clear page and displays landing page
+document.querySelector(".home").addEventListener("click", () => { clearNode(load); home.style.display = "block"; contactForm.style.display = "none" })
+
+//Event listener for Contact button. clear content on page and shows the contact form
+document.querySelector(".contact").addEventListener("click", () => {
+    clearNode(load);
+    if (contactForm.style.display === "none") { contactForm.style.display = "inline-grid" }
+    else { contactForm.style.display = "none" }
+})
+contactForm.addEventListener("submit", (event) => {
+    event.preventDefault(); // prevent the default form submission  
+    alert(`Hi ${contactForm.name.value}!, Your message has being sent`);
+    contactForm.style.display = "none"
+    clearNode(load)
+    home.style.display = "block"
+    contactForm.reset();
+});
+
 
 
 
@@ -39,6 +56,7 @@ function buttonCall() {
     clearNode(load)
     home.style.display = "none"
     form.style.display = "none"
+    contactForm.style.display = "none"
     h2.textContent = this.textContent;
     if (this.textContent === "Cart") {
         loadCart();
