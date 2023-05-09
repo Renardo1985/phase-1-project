@@ -1,13 +1,15 @@
 @font-face {
-  font-family: XiaoWei;
-  src: url("src/ZCOOLXiaoWei-Regular.ttf");
+    font-family: XiaoWei;
+    src: url("src/ZCOOLXiaoWei-Regular.ttf");
 }
-body{
+
+body {
     background-color: black;
     background-repeat: no-repeat;
-    font-family: XiaoWei; 
-    color: #ffffff; 
-} 
+    font-family: XiaoWei;
+    color: #ffffff;
+}
+
 #logo {
     display: block;
     margin-left: auto;
@@ -16,19 +18,23 @@ body{
     width: 35.5rem;
     object-fit: cover;
 }
+
 /* The navigation menu div*/
-.nav {        
-    display: flex;      
-    margin-top: 1rem; 
+.nav {
+    display: flex;
+    margin-top: 1rem;
+    margin-left: 10%;
 }
-  /* The navigation menu links */
-#btn{
+
+/* The navigation menu links */
+.btn {
     padding: 6px 6px;
-    font-size: 30px; 
-} 
-button {        
+    font-size: 30px;
+}
+
+button {
     background-color: black;
-    color: white;  
+    color: white;
     font-family: XiaoWei;
     border: none;
     position: relative;
@@ -37,32 +43,37 @@ button {
     width: max-content;
     font-size: 18px;
     justify-self: center;
-} 
-button:hover{
-  background-color: #d4af37;
 }
-#home{
+
+button:hover {
+    background-color: #d4af37;
+}
+
+#home {
     display: inline-block;
     text-align: center;
     margin-left: 10%;
     margin-right: 10%;
     color: #ffffff;
 }
-#home p{
+
+#home p {
     text-align: justify;
 }
-#load{
+
+#load {
     margin-left: 10%;
     margin-right: 10%;
     text-align: center;
 }
-#load p{
+
+#load p {
     text-align: justify;
-    word-spacing:-2px;
+    word-spacing: -2px;
     justify-self: center;
 }
 
-.pastry-item{
+.pastry-item {
     text-align: center;
     padding: .5rem;
     width: 30rem;
@@ -71,16 +82,18 @@ button:hover{
     margin: 1rem 2rem;
     color: #ffffff;
 }
+
 .item-image {
     justify-self: center;
     height: 16rem;
     width: 25rem;
     object-fit: fill;
-    border: grey solid 2px;    
+    border: grey solid 2px;
 }
-.cart-item{  
+
+.cart-item {
     text-align: center;
-    border: grey solid 1px;  
+    border: grey solid 1px;
     padding: .5rem;
     width: 14rem;
     height: 20rem;
@@ -88,15 +101,18 @@ button:hover{
     margin: 1rem 1rem;
     color: #ffffff;
 }
-.cart-img{
-    justify-self: center; 
+
+.cart-img {
+    justify-self: center;
     width: 14rem;
 }
-#form-container{
+
+#form-container {
     display: block;
     text-align: center;
 }
-#checkout-form{
+
+#checkout-form {
     text-align: center;
     justify-self: center;
 
