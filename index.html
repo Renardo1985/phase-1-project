@@ -32,8 +32,18 @@
       <p>As a small business, I am extremely grateful to all of my customers and love building relationships to help me
         get to know you better and design the perfect dessert for you, your family and friends.</p>
     </div>
-    <div id="load">
+    <div id = "contact-container">
+    <form id="contact">
+      <label for="Name" class="fcf-label">Your name</label>
+      <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+      <label for="Email" class="fcf-label">Your email address</label>
+      <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+      <label for="Message" class="fcf-label">Your message</label>
+      <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+      <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
+    </form>
     </div>
+    <div id="load"></div>
     <div id="form-container">
       <form id="checkout-form">
         <label for="name">Name:</label>

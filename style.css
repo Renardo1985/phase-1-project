@@ -117,3 +117,14 @@ button:hover {
     justify-self: center;
 
 }
+#contact-container {
+    display: block;
+    text-align: center;
+}
+
+#contact {
+    display: inline-grid;
+    text-align:left;
+    width: 30rem;
+    height: 15rem;
+}
