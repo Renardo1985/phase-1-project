@@ -56,10 +56,12 @@ function buttonCall() {
     contactForm.style.display = "none"
     h2.textContent = this.textContent;
     if (this.textContent === "Cart") {
+        load.style.textAlign = "";
         loadCart();
     }
     else {
         p.textContent = about[this.textContent.toLowerCase()];
+        load.style.textAlign = "center";
         load.append(h2, p)
         requestData(this.textContent.toLowerCase());
     }
@@ -105,8 +107,15 @@ function generateItem(data, key) {
         updateRating(data, key)
     })
     add.textContent = "Add to Cart"
-    //when add to cart is clicked adds item to array cart
-    add.addEventListener("click", () => { cart.push(data); console.log(cart) })
+    //when add to cart is clicked adds item to array cart 
+    add.addEventListener("click", () => { 
+        if (cart.indexOf(data)>=0)
+        {
+            cart[cart.indexOf(data)].quantity +=1; //if item already exist in array +1 quantity
+        }
+        else{
+        data.quantity = 1; cart.push(data); console.log(cart) }// if item does not exist in array add item to array
+    })
     container.append(h, img, p1, rate, p2, add)
     load.append(container)
 }
@@ -120,19 +129,21 @@ function loadCart() {
     //loops throught the cart array
     cart.forEach((element, index) => {
         let item = document.createElement("div");
-        item.classList = "cart-item"
         let p1 = document.createElement("p");
         let p2 = document.createElement("p");
         let img = document.createElement("img");
-        img.classList = "cart-img"
         let remove = document.createElement("button")
+        item.classList = "cart-item"
+        p1.classList = "cartP1"
+        p2.classList = "cartP2"
+        img.classList = "cart-img"
+        remove.classList ="cart-remove"
         img.src = element.image;
-        img.style.height = "12rem"
-        p1.textContent = `About: ${element.name}`;
+        p1.textContent = `${element.name}`;
+        p2.textContent = `Price: $${element.price}`;
         remove.textContent = "Remove"
         remove.addEventListener("click", () => { cart.splice(index, 1); loadCart(); });
-        p2.textContent = `Price: $${element.price}`;
-        item.append(img, p1, remove, p2)
+        item.append(img, p1, p2, remove,)
         load.append(item)
     })
     //Renders a check out button once there are items in the cart

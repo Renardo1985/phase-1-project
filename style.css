@@ -8,6 +8,12 @@ body {
     background-repeat: no-repeat;
     font-family: XiaoWei;
     color: #ffffff;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.buffer {
+    padding: 1rem;
 }
 
 #logo {
@@ -22,23 +28,25 @@ body {
 /* The navigation menu div*/
 .nav {
     position: relative;
-    margin-left: 9.5%;
-    margin-right: 10%;
     overflow: hidden;
 }
-.nav button{
+
+.nav button {
     float: left;
 }
-.center{
+
+.center {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%)
 }
-.center button{
-float: none;
+
+.center button {
+    float: none;
 }
-.right{
+
+.right {
     float: right;
 }
 
@@ -47,12 +55,12 @@ button {
     color: white;
     font-family: XiaoWei;
     border: none;
-    position: relative;
-    border: none;
+    /* position: relative; */
+    /* border: none; */
     height: 2.5rem;
-    width: max-content;
+    /* width: max-content; */
     font-size: 18px;
-    justify-self: center;
+    /* justify-self: center; */
 }
 
 button:hover {
@@ -60,61 +68,62 @@ button:hover {
 }
 
 #home {
-    display: inline-block;
     text-align: center;
-    margin-left: 10%;
-    margin-right: 10%;
-    color: #ffffff;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-bottom: 1rem;
 }
 
-#home p {
-    text-align: justify;
-}
-
-#load {
-    margin-left: 10%;
-    margin-right: 10%;
+/* .pClass {
     text-align: center;
-}
-
-#load p {
-    text-align: justify;
-    word-spacing: -2px;
-    justify-self: center;
-}
+} */
 
 .pastry-item {
     text-align: center;
     padding: .5rem;
-    width: 30rem;
-    height: 30rem;
+    width: 20rem;
+    height: 35rem;
     display: inline-grid;
-    margin: 1rem 2rem;
-    color: #ffffff;
+    margin: 1rem 1rem;
 }
 
 .item-image {
     justify-self: center;
-    height: 16rem;
-    width: 25rem;
-    object-fit: fill;
-    border: grey solid 2px;
+    height: 165px;
+    width: 250px;
+    object-fit: cover;
+    border: black solid 1.5px;
 }
 
-.cart-item {
-    text-align: center;
-    border: grey solid 1px;
-    padding: .5rem;
-    width: 14rem;
-    height: 20rem;
-    display: inline-grid;
-    margin: 1rem 1rem;
-    color: #ffffff;
+.item-image:hover {
+    box-shadow: 0 0 30px 1px #ffffff
+}
+
+.cart-item {    
+    border: grey solid 2px; 
+    margin: .5rem .5rem;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    color: black;
 }
 
 .cart-img {
-    justify-self: center;
-    width: 14rem;
+    height: 6rem;
+    width: 8rem;
+    text-align: center;
+    padding-right: 4rem;
+}
+.cartP2{
+    line-height: 10px;
+    font-size: 1.2rem;
+    min-width: 12rem;
+   } 
+.cartP1{
+    line-height: 10px;
+    font-size: 1.2rem;
+    min-width: 12rem;
 }
 
 #form-container {
@@ -127,6 +136,7 @@ button:hover {
     justify-self: center;
 
 }
+
 #contact-container {
     display: block;
     text-align: center;
@@ -134,14 +144,7 @@ button:hover {
 
 #contact {
     display: inline-grid;
-    text-align:left;
+    text-align: left;
     width: 30rem;
     height: 15rem;
-}
-a{
-    color: blue;
-    font-size: 1.4rem;
-}
-a:hover{
-    color: #d4af37;
 }
