@@ -17,7 +17,7 @@ git clone git@github.com:Renardo1985/project-iconic-desserts.git
 ```
 Run the db.json file: 
 ```bash
-json-server -watch db.json
+json-server --watch db.json
 # or
 json-server -w db.json
 ```
