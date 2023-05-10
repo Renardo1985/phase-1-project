@@ -35,7 +35,7 @@ Contact section with a basic form submission.
 
 
 
-
+## Acknowledgments
 
 https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp
 
