@@ -4,18 +4,6 @@
 
 This is a work in progress web application that i am building for my wife. She has statrted a pastry company and wanted me to build a web page for her. The main purpose for web application  is to select and order different baked goods of different quantities.
 
-## Features
-
-View Different pastries items in different category.
-
-Add/Delete View items in Cart.
-
-Rate each item with star rating.
-
-Check-Out section with basic form submission.
-
-Contact section with a basic form submission.
-
 ### Prerequisites
 First install JSON Server.
 ```bash
@@ -34,6 +22,20 @@ json-server -watch db.json
 json-server -w db.json
 ```
 open index.html in your browser.
+
+## Features
+
+View Different pastries items in different category.
+
+Add/Delete View items in Cart.
+
+Rate each item with star rating.
+
+Check-Out section with basic form submission.
+
+Contact section with a basic form submission.
+
+
 
 
 
