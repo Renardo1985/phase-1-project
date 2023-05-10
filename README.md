@@ -1,5 +1,7 @@
 # project-iconic-desserts
 
+![Project](src/Project SS.png)
+
 This is a work in progress web application that i am building for my wife. She has statrted a pastry company and wanted me to build a web page for her. The main purpose for web application  is to select and order different baked goods of different quantities.
 
 ### Prerequisites
