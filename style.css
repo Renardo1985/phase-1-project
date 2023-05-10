@@ -55,12 +55,8 @@ button {
     color: white;
     font-family: XiaoWei;
     border: none;
-    /* position: relative; */
-    /* border: none; */
     height: 2.5rem;
-    /* width: max-content; */
-    font-size: 18px;
-    /* justify-self: center; */
+    font-size: 18px;    
 }
 
 button:hover {
@@ -73,11 +69,6 @@ button:hover {
     margin-right: 20%;
     padding-bottom: 1rem;
 }
-
-/* .pClass {
-    text-align: center;
-} */
-
 .pastry-item {
     text-align: center;
     padding: .5rem;
@@ -100,7 +91,6 @@ button:hover {
 }
 
 .cart-item {
-    /* border: grey solid 2px;  */
     margin: .5rem .5rem;
     width: 50%;
     display: flex;
