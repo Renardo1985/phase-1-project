@@ -16,12 +16,16 @@ Check-Out section with basic form submission.
 
 Contact section with a basic form submission.
 
-
-## Getting Started
-
+### Prerequisites
 First install JSON Server.
 ```bash
 npm install -g json-server
+```
+
+## Getting Started
+Clone the repo 
+```bash
+git clone git@github.com:Renardo1985/project-iconic-desserts.git
 ```
 Run the db.json file: 
 ```bash
@@ -29,6 +33,8 @@ json-server -watch db.json
 # or
 json-server -w db.json
 ```
+open index.html in your browser.
+
 
 
 https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp
