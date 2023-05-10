@@ -29,11 +29,12 @@ contactForm.style.display = "none"
 buttons.forEach(element => { element.addEventListener("click", buttonCall) });
 
 //Event listener for Home button clear page and displays landing page
-document.querySelector(".home").addEventListener("click", () => { clearNode(load); home.style.display = "block"; contactForm.style.display = "none" })
+document.querySelector(".home").addEventListener("click", () => { clearNode(load); home.style.display = "block"; contactForm.style.display = "none";form.style.display = "none" })
 
 //Event listener for Contact button. clear content on page and shows the contact form
 document.querySelector(".contact").addEventListener("click", () => {
     clearNode(load);
+    form.style.display = "none"
     if (contactForm.style.display === "none") { contactForm.style.display = "inline-grid" }
     else { contactForm.style.display = "none" }
 })
@@ -212,8 +213,7 @@ function reduceCart(key) {
 
 }
 
-
-//function used to clear nodes in DOM
+//function used to clear nodes in DOM for #load <div>
 function clearNode(node) {
     while (node.firstChild) {
         node.removeChild(node.firstChild);
