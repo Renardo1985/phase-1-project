@@ -4,11 +4,11 @@ This is a work in progress web application that i am building for my wife. She h
 
 ## Features
 
->> View Different pastries items in different category
->> Add/Delete View items in Cart.
->> Rate each item with star rating
->> Check-Out section with basic form submission
->> Contact section with a basic form submission
+View Different pastries items in different category.
+Add/Delete View items in Cart.
+Rate each item with star rating.
+Check-Out section with basic form submission.
+Contact section with a basic form submission.
 
 ## Getting Started
 
