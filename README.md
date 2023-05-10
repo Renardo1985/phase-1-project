@@ -21,7 +21,7 @@ json-server --watch db.json
 # or
 json-server -w db.json
 ```
-open index.html in your browser.
+Open index.html in your browser.
 
 ## Features
 
@@ -37,7 +37,7 @@ Contact section with a basic form submission.
 
 
 
-## Acknowledgments
+## Acknowledgments and Credits
 
 https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp
 
@@ -46,3 +46,23 @@ https://www.javascripttutorial.net/dom/manipulating/remove-all-child-nodes/
 https://uxplanet.org/how-to-create-a-shopping-cart-ui-using-html-css-e5db3cd55aa0
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/display
+
+https://kerrysbouqcakes.co.uk/blog/
+
+https://curlygirlkitchen.com/perfect-fudge-brownies/
+
+https://www.kingarthurbaking.com/recipes/gluten-free-vanilla-bundt-cake-recipe
+
+https://www.facebook.com/cookiecartelemerald/
+
+https://thecookiedoughdiaries.com/chocolate-chunk-blondies/
+
+https://www.pinterest.co.uk/pin/300333868908849509/
+
+https://whiteflowercake.com/gourmet-cupcakes
+
+https://www.onesarcasticbaker.com/triple-fudgy-chocolate-chip-cookies/
+
+https://www.delicious.com.au/recipes/fancy-chocolate-later-cake-recipe/enmkhdqi
+
+https://www.seriouseats.com/super-thick-chocolate-chip-cookie-recipe
