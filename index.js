@@ -108,13 +108,13 @@ function generateItem(data, key) {
     })
     add.textContent = "Add to Cart"
     //when add to cart is clicked adds item to array cart 
-    add.addEventListener("click", () => { 
-        if (cart.indexOf(data)>=0)
-        {
-            cart[cart.indexOf(data)].quantity +=1; //if item already exist in array +1 quantity
-        }
-        else{
-        data.quantity = 1; cart.push(data); console.log(cart) }// if item does not exist in array add item to array
+    add.addEventListener("click", () => {    
+        let index = -1
+        for (let i = 0; i < cart.length; i++) {
+            if (cart[i].name === data.name){index=i}            
+        }        
+        if (index>= 0) { cart[index].quantity += 1; }//if item already exist in array +1 quantity
+        else { data.quantity = 1; cart.push(data);  } // if item does not exist in array add item to array
     })
     container.append(h, img, p1, rate, p2, add)
     load.append(container)
@@ -124,32 +124,34 @@ function generateItem(data, key) {
 function loadCart() {
     clearNode(load)
     h2.textContent = "Cart"
-    p.textContent = `You have ${cart.length} item(s) in your cart.`
+    p.textContent = `You have ${reduceCart(0)} item(s) in your cart.`
     load.append(h2, p)
     //loops throught the cart array
     cart.forEach((element, index) => {
         let item = document.createElement("div");
         let p1 = document.createElement("p");
         let p2 = document.createElement("p");
+        let p3 = document.createElement("p")
         let img = document.createElement("img");
         let remove = document.createElement("button")
         item.classList = "cart-item"
         p1.classList = "cartP1"
         p2.classList = "cartP2"
         img.classList = "cart-img"
-        remove.classList ="cart-remove"
+        p3.classList = "cart-quantity"
         img.src = element.image;
         p1.textContent = `${element.name}`;
         p2.textContent = `Price: $${element.price}`;
+        p3.textContent = `Qtn ${element.quantity}`
         remove.textContent = "Remove"
         remove.addEventListener("click", () => { cart.splice(index, 1); loadCart(); });
-        item.append(img, p1, p2, remove,)
+        item.append(img, p1,p3,p2, remove,)
         load.append(item)
     })
     //Renders a check out button once there are items in the cart
-    if (cart.length > 0) {
+    if (reduceCart(0) > 0) {
         let total = document.createElement("p")
-        total.textContent = `Total Price $${reduceCart()}`
+        total.textContent = `Total Price $${reduceCart(1)}`
         let checkOut = document.createElement("button")
         checkOut.textContent = "Continue to Check Out"
         checkOut.addEventListener("click", () => { checkOutForm() })
@@ -161,9 +163,9 @@ function checkOutForm() {
     let h2 = document.createElement("h2");
     h2.textContent = "Cart"
     let p = document.createElement("p")
-    p.textContent = `You have ${cart.length} item(s) in your cart.`
+    p.textContent = `You have ${reduceCart(0)} item(s) in your cart.`
     let total = document.createElement("p")
-    total.textContent = `Total Price $${reduceCart()}`
+    total.textContent = `Total Price $${reduceCart(1)}`
     load.append(h2, p, total)
     form.style.display = "Inline-grid";
     form.addEventListener("submit", (event) => {
@@ -177,13 +179,24 @@ function checkOutForm() {
     });
 }
 
-//Function to calculate Total price for all items in cart
-function reduceCart() {
-    const sumOfPrices = cart.reduce((accumulator, currentValue) => {
-        return accumulator + currentValue.price;
-    }, 0);
-    return sumOfPrices;
+//Function to calculate Total price for all items in cart/or total quantity
+function reduceCart(key) {
+    if (key === 1) {
+        const sum = cart.reduce((accumulator, currentValue) => {
+            return accumulator + currentValue.price;
+        }, 0);
+        return sum
+    }
+    else {
+        const sum = cart.reduce((accumulator, currentValue) => {
+            return accumulator + currentValue.quantity;
+        }, 0);
+        return sum;
+    }
+  
 }
+
+
 //function used to clear nodes in DOM
 function clearNode(node) {
     while (node.firstChild) {
