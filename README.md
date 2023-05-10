@@ -1,6 +1,6 @@
 # project-iconic-desserts
 
-![Project](src/Project SS.png)
+![ProjectScreen](https://github.com/Renardo1985/project-iconic-desserts/blob/ebde6af687df7fa091b46b65e7a87a69a0101333/src/ProjectSS.png)
 
 This is a work in progress web application that i am building for my wife. She has statrted a pastry company and wanted me to build a web page for her. The main purpose for web application  is to select and order different baked goods of different quantities.
 
