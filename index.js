@@ -128,24 +128,44 @@ function loadCart() {
     load.append(h2, p)
     //loops throught the cart array
     cart.forEach((element, index) => {
+
         let item = document.createElement("div");
         let p1 = document.createElement("p");
         let p2 = document.createElement("p");
-        let p3 = document.createElement("p")
         let img = document.createElement("img");
+        let p3 = document.createElement("p")
+        let selector = document.createElement("div");
+        let pQ = document.createElement("div")
+        let add = document.createElement("button")
         let remove = document.createElement("button")
+        
+        selector.classList = "addremove";
+        pQ.classList = "priceQ"
         item.classList = "cart-item"
         p1.classList = "cartP1"
-        p2.classList = "cartP2"
         img.classList = "cart-img"
-        p3.classList = "cart-quantity"
+
+
         img.src = element.image;
         p1.textContent = `${element.name}`;
         p2.textContent = `Price: $${element.price}`;
-        p3.textContent = `Qtn ${element.quantity}`
-        remove.textContent = "Remove"
-        remove.addEventListener("click", () => { cart.splice(index, 1); loadCart(); });
-        item.append(img, p1,p3,p2, remove,)
+        p3.textContent = `Qty: ${element.quantity}`;
+        add.textContent = "add";
+        remove.textContent = "remove"
+
+        remove.addEventListener("click", () => { 
+            if(cart[index].quantity >1){
+                cart[index].quantity -=1
+                loadCart()
+            }
+            else{
+            cart.splice(index, 1); loadCart(); }
+            });
+        add.addEventListener("click",()=>{ cart[index].quantity +=1; loadCart()});
+
+        selector.append(add,remove)
+        pQ.append(p2,p3)
+        item.append(img, p1,pQ, selector,)
         load.append(item)
     })
     //Renders a check out button once there are items in the cart
@@ -183,7 +203,7 @@ function checkOutForm() {
 function reduceCart(key) {
     if (key === 1) {
         const sum = cart.reduce((accumulator, currentValue) => {
-            return accumulator + currentValue.price;
+            return accumulator + (currentValue.price*currentValue.quantity);
         }, 0);
         return sum
     }

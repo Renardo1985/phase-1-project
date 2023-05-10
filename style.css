@@ -99,7 +99,7 @@ button:hover {
     box-shadow: 0 0 30px 1px #ffffff
 }
 
-.cart-item {    
+.cart-item {
     /* border: grey solid 2px;  */
     margin: .5rem .5rem;
     width: 50%;
@@ -113,16 +113,22 @@ button:hover {
     text-align: center;
     padding-right: 4rem;
 }
-.cartP2{
-    line-height: 10px;
-    font-size: 1.2rem;
+
+.priceQ {
     min-width: 12rem;
-   } 
-.cartP1{
+}
+
+.cartP1 {
     line-height: 10px;
     font-size: 1.2rem;
     min-width: 12rem;
 }
+
+.addremove {
+
+    display: grid;
+}
+
 
 #form-container {
     display: block;
