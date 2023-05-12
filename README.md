@@ -66,3 +66,7 @@ https://www.onesarcasticbaker.com/triple-fudgy-chocolate-chip-cookies/
 https://www.delicious.com.au/recipes/fancy-chocolate-later-cake-recipe/enmkhdqi
 
 https://www.seriouseats.com/super-thick-chocolate-chip-cookie-recipe
+
+https://codingartistweb.com/2020/01/gold-text-effect-css-text-effect/
+
+https://www.w3schools.com/css/css3_gradients.asp
