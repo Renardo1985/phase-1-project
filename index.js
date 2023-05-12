@@ -42,7 +42,7 @@ document.querySelector(".contact").addEventListener("click", () => {
 //Event listener on contact form.
 contactForm.addEventListener("submit", (event) => {
     event.preventDefault(); // prevent the default form submission  
-    alert(`Hi ${contactForm.name.value}!, Your message has being sent`);
+    alert(`Hi ${contactForm.Name.value}!, Your message has being sent`);
     contactForm.style.display = "none"
     clearNode(load)
     home.style.display = "block"
