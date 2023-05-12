@@ -88,6 +88,7 @@ button:hover {
     margin-left: 20%;
     margin-right: 20%;
     padding-bottom: 1rem;
+    font-size: 130%;
 }
 
 .pastry-item {
@@ -162,4 +163,7 @@ button:hover {
     text-align: left;
     width: 30rem;
     height: 15rem;
+}
+.pClass{
+    font-size: 120%;
 }
