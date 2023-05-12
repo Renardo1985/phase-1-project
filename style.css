@@ -5,7 +5,6 @@
 
 body {
     background-color: black;
-    background-repeat: no-repeat;
     font-family: XiaoWei;
     color: #ffffff;
     margin-left: 10%;
@@ -14,6 +13,10 @@ body {
 
 .buffer {
     padding: 1rem;
+}
+
+.head {
+    background-image: linear-gradient(#3a3a3a, #141414, #000000);
 }
 
 #logo {
@@ -29,10 +32,22 @@ body {
 .nav {
     position: relative;
     overflow: hidden;
+    background-color: #000000;
 }
 
 .nav button {
-    float: left;
+    background-image: linear-gradient(to bottom right, #462523 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #462523 100%);
+    color: #141414;
+    font-family: XiaoWei;
+    height: 2.5rem;
+    border: none;
+    font-weight: 550;
+    font-size: 1.5rem;
+}
+
+.nav button:hover {
+    background-image: linear-gradient(to bottom right, #462523 5%, #cb9b51 25%, #f6e27a 40%, #f6f2c0 30%, #f6e27a 55%, #cb9b51 78%, #462523 100%);
+    font-weight: 900;
 }
 
 .center {
@@ -55,12 +70,17 @@ button {
     color: white;
     font-family: XiaoWei;
     border: none;
-    height: 2.5rem;
-    font-size: 18px;    
+    height: 2rem;
+    font-size: 18px;
+    width: fit-content;
+    justify-self: center;
 }
 
 button:hover {
     background-color: #d4af37;
+    color: #000000;
+    font-weight: 600;
+
 }
 
 #home {
@@ -69,6 +89,7 @@ button:hover {
     margin-right: 20%;
     padding-bottom: 1rem;
 }
+
 .pastry-item {
     text-align: center;
     padding: .5rem;
