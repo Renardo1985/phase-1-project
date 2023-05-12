@@ -14,7 +14,7 @@
       "image": "src/bundt-cake.jpg",
       "about": "Bundt cakes are prefect for any occasion; holiday gift, birthday gift, anniversary gift, celebratory gift or a just-because gift. A 10 inch cake, with numerous flavor options, that can be topped with sugar glaze, dusted with powdered sugar, drizzled with chocolate ganache or be served plain.",
       "price": 75,
-      "rating": 1
+      "rating": 2
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@
       "image": "src/letter cake.png",
       "about": "Number/Letter cakes are the perfect way to celebrate those big milestone birthdays or to honor a big-day detail such as anniversaries or weddings. As with our round cakes, our number/letter cakes are also created with bespoke colour schemes and themes in mind, and are always personalised with a name and decorations.",
       "price": 120,
-      "rating": 2
+      "rating": 1
     }
   ],
   "cupcakes": [
