@@ -117,6 +117,7 @@ button:hover {
     width: 50%;
     display: flex;
     align-items: center;
+    border: #d4af37 solid 2px;
 }
 
 .cart-img {
