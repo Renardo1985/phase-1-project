@@ -171,7 +171,7 @@ function loadCart() {
         total.textContent = `Total Price $${reduceCart(1)}`
         let checkOut = document.createElement("button")
         checkOut.textContent = "Continue to Check Out"
-        checkOut.addEventListener("click", () => { checkOutForm() })
+        checkOut.addEventListener("click", () => { checkOutForm() });
         load.append(total, checkOut)
     }
 }
@@ -187,11 +187,11 @@ function checkOutForm() {
     form.style.display = "Inline-grid";
     form.addEventListener("submit", (event) => {
         event.preventDefault(); // prevent the default form submission  
-        alert(`Thank you for your purchase ${form.name.value}!, Your order has being processed`); // log a greeting message to the console
-        form.reset();
+        alert(`Thank you for your purchase ${form.name.value}!, Your order has being processed`); // log a greeting message to the console     
         home.style.display = "block"
         form.style.display = "none"
         cart.splice(0, cart.length); //empty the elements from cart 
+        form.reset();
         clearNode(load)
     });
 }

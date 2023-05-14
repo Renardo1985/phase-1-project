@@ -22,7 +22,7 @@
       "image": "src/letter cake.png",
       "about": "Number/Letter cakes are the perfect way to celebrate those big milestone birthdays or to honor a big-day detail such as anniversaries or weddings. As with our round cakes, our number/letter cakes are also created with bespoke colour schemes and themes in mind, and are always personalised with a name and decorations.",
       "price": 120,
-      "rating": 1
+      "rating": 4
     }
   ],
   "cupcakes": [
@@ -32,7 +32,7 @@
       "image": "src/cupcakes-1.jpg",
       "about": "1-2 colors of  your choice with decorative items (such as sprinkles, 4 marshmallow fondant toppers and edible luster dust.",
       "price": 60,
-      "rating": 2
+      "rating": 3
     },
     {
       "id": 2,
@@ -92,7 +92,7 @@
       "image": "src/blonde-brownies.jpg",
       "about": "Half dozen chocolate blondies made with premium quality chocolate all-natural ingredients.",
       "price": 36,
-      "rating": 2
+      "rating": 1
     }
   ]
 }
