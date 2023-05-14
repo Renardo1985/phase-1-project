@@ -35,8 +35,8 @@ Check-Out section with basic form submission.
 
 Contact section with a basic form submission.
 
+## Video Walkthrough 
 https://youtu.be/Jp_ux71HD_c
-
 
 
 ## Acknowledgments and Credits
