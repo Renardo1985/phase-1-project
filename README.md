@@ -2,7 +2,7 @@
 
 ![ProjectScreen](https://github.com/Renardo1985/project-iconic-desserts/blob/2fd134160a4a2fbfdc81d0aa6bcebe98a35d72fd/src/ProjectSS.png)
 
-This is a work in progress eCommerce web application that i am building for my wife. She has statrted a pastry company and wanted me to build a web page for her. The main purpose for web application  is to View, Rate  and order different desserts in different categories.
+This is a work in progress eCommerce web application that I am building for my wife. She has started a pastry company and wanted me to build a web page for her. The main purpose for web application  is to View, Rate  and order different desserts in different categories.
 
 ### Prerequisites
 First install JSON Server.
