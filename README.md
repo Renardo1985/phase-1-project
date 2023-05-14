@@ -35,6 +35,8 @@ Check-Out section with basic form submission.
 
 Contact section with a basic form submission.
 
+[![Watch the video]([https://i.imgur.com/vKb2F1B.png)](https://youtu.be/vt5fpE0bzSY](https://github.com/Renardo1985/project-iconic-desserts/blob/67229bc4414b1d6a0fb9a2bc034907174c7ea12b/src/Project_Walkthrough.mp4))
+
 
 
 ## Acknowledgments and Credits
